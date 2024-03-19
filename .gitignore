@@ -9,3 +9,13 @@ index_path/data.lexicon.fsomapfile
 index_path/data.inverted.bf
 index_path/data.document.fsarrayfile
 index_path/data.direct.bf
+index/data.direct.bf
+index/data.document.fsarrayfile
+index/data.inverted.bf
+index/data.lexicon.fsomapfile
+index/data.lexicon.fsomaphash
+index/data.lexicon.fsomapid
+index/data.meta-0.fsomapfile
+index/data.meta.idx
+index/data.meta.zdata
+index/data.properties
