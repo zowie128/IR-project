@@ -1,0 +1,11 @@
+
+index_path/data.properties
+index_path/data.meta.zdata
+index_path/data.meta.idx
+index_path/data.meta-0.fsomapfile
+index_path/data.lexicon.fsomapid
+index_path/data.lexicon.fsomaphash
+index_path/data.lexicon.fsomapfile
+index_path/data.inverted.bf
+index_path/data.document.fsarrayfile
+index_path/data.direct.bf
