@@ -9,3 +9,4 @@ index_path/data.lexicon.fsomapfile
 index_path/data.inverted.bf
 index_path/data.document.fsarrayfile
 index_path/data.direct.bf
+models/*
