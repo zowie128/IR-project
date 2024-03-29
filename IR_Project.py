@@ -87,9 +87,10 @@ class QueryEvaluator:
 
     def evaluate_queries(self, sentences):
         features = self.tokenizer(sentences, padding=True, truncation=True, return_tensors="pt")
+        print(features)
         with torch.no_grad():
             scores = self.model(**features).logits
-        return scores[:, 0]  # Assuming scores are probabilities
+        return scores[:, 0]
 
 # TODO: We need to adjust this class so that it gives reasonable outputs for the queries
 class RewriteQueries:
@@ -128,7 +129,7 @@ if __name__ == "__main__":
     rewritten_queries = load_data_from_file(rewritten_queries_path)
     if rewritten_queries is None:
         rewritten_queries = []
-        query_rewriter = RewriteQueries("your_hugging_face_auth_token_here")
+        query_rewriter = RewriteQueries("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")
         for query in queries_to_rewrite:
             response = query_rewriter.query(query)
             if response and isinstance(response, list) and 'generated_text' in \
