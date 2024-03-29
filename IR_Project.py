@@ -87,7 +87,6 @@ class QueryEvaluator:
 
     def evaluate_queries(self, sentences):
         features = self.tokenizer(sentences, padding=True, truncation=True, return_tensors="pt")
-        print(features)
         with torch.no_grad():
             scores = self.model(**features).logits
         return scores[:, 0]
@@ -116,6 +115,7 @@ if __name__ == "__main__":
     print(f"Total number of queries: {len(original_queries)}")
 
     # Evaluate queries to determine which need rewriting
+
     query_evaluator = QueryEvaluator("Ashishkr/query_wellformedness_score",
                                      "Ashishkr/query_wellformedness_score")
     well_formed_scores = query_evaluator.evaluate_queries(original_queries)
@@ -142,6 +142,10 @@ if __name__ == "__main__":
     cleaned_queries = preprocess_rewritten_queries(rewritten_queries)
     for query in cleaned_queries:
         print(f"Cleaned Query: {query}")
+
+    # output the cleaned queries to a json file
+    with open('cleaned_queries.json', 'w') as f:
+        json.dump(cleaned_queries, f)
 
 
 
