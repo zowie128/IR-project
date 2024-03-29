@@ -103,7 +103,6 @@ if __name__ == "__main__":
     print(queries_to_rewrite)
 
     query_rewriter = RewriteQueries("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")
-    rewritten_query = query_rewriter.query(queries_to_rewrite[1])
 
     # Loop over all queries and process the rewritten queries
     for query in queries_to_rewrite:
