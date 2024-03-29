@@ -14,6 +14,10 @@ import os
 import pandas as pd
 import re
 import json
+import spacy
+from spacy.matcher import Matcher
+from spacy.lang.en.stop_words import STOP_WORDS
+from spacy.tokens import Token
 
 
 # Ensure NLTK data is downloaded only once
@@ -41,10 +45,7 @@ def remove_redundancy(preprocessed_query):
     unique_tokens = [t for t in tokens if not (t in seen or seen.add(t))]
     return ' '.join(unique_tokens)
 
-import spacy
-from spacy.matcher import Matcher
-from spacy.lang.en.stop_words import STOP_WORDS
-from spacy.tokens import Token
+
 
 # Load spaCy English tokenizer, tagger, parser, NER and word vectors
 nlp = spacy.load("en_core_web_sm")
@@ -156,12 +157,14 @@ class RewriteQueries:
 
 # Example usage
 if __name__ == "__main__":
+    dataset_loader = DatasetLoader('irds:msmarco-passage/trec-dl-2020')
     # Load or fetch original queries
     original_queries = load_data_from_file(original_queries_path)
     if original_queries is None:
-        dataset_loader = DatasetLoader('irds:msmarco-passage/trec-dl-2020')
         original_queries = dataset_loader.get_original_queries()
         save_data_to_file(original_queries, original_queries_path)
+
+
 
     print(f"Total number of queries: {len(original_queries)}")
 
@@ -188,15 +191,13 @@ if __name__ == "__main__":
     # Process the rewritten queries with the original query included
     cleaned_queries = [(query['original_query'], preprocess_rewritten_queries([query])[0]) for query in rewritten_queries]
 
-    # Output the cleaned and original queries to a JSON file
     with open('cleaned_queries_with_original.json', 'w') as f:
         json.dump(cleaned_queries, f)
 
-    # Adjust the final output loop to print both the original and final queries
     for original_query, cleaned_query in cleaned_queries:
         preprocessed_query = preprocess_query(cleaned_query)
         final_query = remove_redundancy(preprocessed_query)
-        print(f"Original Query: {original_query} | Final Query: {final_query}")
+        # print(f"Original Query: {original_query} | Final Query: {final_query}")
 
 
     # output the final queries to a JSON file
@@ -204,10 +205,78 @@ if __name__ == "__main__":
         json.dump(cleaned_queries, f)
 
 
+    # Load the final queries with original and rewritten versions
+    with open('final_queries.json', 'r') as f:
+        queries_data = json.load(f)
+
+    # Load the cleaned and potentially rewritten queries
+    with open('cleaned_queries_with_original.json', 'r') as f:
+        cleaned_queries = json.load(f)
+
+    # Create a new DataFrame for rewritten queries, ensuring all queries are included
+    rewritten_queries_list = []
+    for q in original_queries:
+        # Find the rewritten version if it exists, otherwise use the original
+        rewritten_or_original = next((item for item in cleaned_queries if
+                                      item['original_query'] == q['query']),
+                                     None)
+        if rewritten_or_original:
+            rewritten_query = rewritten_or_original['final_query']
+        else:
+            rewritten_query = q[
+                'query']  # Use original if not found in rewritten
+        rewritten_queries_list.append(
+            {'qid': q['qid'], 'query': rewritten_query})
+
+    rewritten_queries_df = pd.DataFrame(rewritten_queries_list)
+
+
+    print(rewritten_queries_df.head())
+
+    index_location = str(Path("index").absolute())
+    index_exists = os.path.isfile(
+        os.path.join(index_location, "data.properties"))
+
+    # Fetch corpus iterator just before indexing
+    if not index_exists:
+        corpus_iter = dataset_loader.get_corpus_iter()  # Ensure this line is correctly placed
+        indexer = pt.IterDictIndexer(index_location)
+        index_ref = indexer.index(corpus_iter)
+        print("Indexing completed.")
+    else:
+        print("Index already exists, loading from disk.")
+        index_ref = index_location
+
+    # Assuming qrels are loaded correctly
+    qrels = dataset_loader.qrels
+
+    index = pt.IndexFactory.of(index_ref)
+    bm25 = pt.BatchRetrieve(index, wmodel="BM25")
+
+    eval_metrics = [pt.measures.RR(rel=1), pt.measures.nDCG @ 10,
+                    pt.measures.MAP(rel=1)]
 
 
 
+    # Evaluating Original Queries
+    print("Evaluating Original Queries with BM25:")
+    results_original = pt.Experiment(
+        [bm25],
+        original_queries_df,
+        qrels,
+        eval_metrics,
+        names=["BM25 Original"]
+    )
 
+    # Evaluating Rewritten Queries
+    print("\nEvaluating Rewritten Queries with BM25:")
+    results_rewritten = pt.Experiment(
+        [bm25],
+        rewritten_queries_df,
+        qrels,
+        eval_metrics,
+        names=["BM25 Rewritten"]
+    )
 
 
 
