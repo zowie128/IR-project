@@ -35,6 +35,57 @@ def load_data_from_file(file_path):
             return json.load(file)
     return None
 
+def remove_redundancy(preprocessed_query):
+    tokens = preprocessed_query.split()
+    seen = set()
+    unique_tokens = [t for t in tokens if not (t in seen or seen.add(t))]
+    return ' '.join(unique_tokens)
+
+import spacy
+from spacy.matcher import Matcher
+from spacy.lang.en.stop_words import STOP_WORDS
+from spacy.tokens import Token
+
+# Load spaCy English tokenizer, tagger, parser, NER and word vectors
+nlp = spacy.load("en_core_web_sm")
+
+# Extend stop words list with common but low-information words
+extended_stop_words = {"define", "meaning", "example", "describe", "use", "refer", "relate", "involve", "include", "give", "take", "make", "see", "want", "get", "say", "ask", "tell", "be", "know", "do", "have", "would", "should", "could", "about"}
+for word in extended_stop_words:
+    STOP_WORDS.add(word)
+
+# Customize token extension to flag important tokens to keep
+Token.set_extension("is_important", default=False, force=True)
+
+def preprocess_query(query):
+    """
+    Preprocess a single query using spaCy for tokenization, lemmatization, and stop word removal,
+    aiming for greater conciseness.
+    """
+    # Process the text
+    doc = nlp(query)
+
+    # Identify important tokens to preserve
+    for ent in doc.ents:
+        for token in ent:
+            token._.is_important = True
+
+    for token in doc:
+        if token.pos_ in {"PROPN", "NOUN", "VERB"}:
+            token._.is_important = True
+
+    # Condense the query by keeping important tokens and removing less important ones
+    tokens = [token.lemma_.lower() for token in doc if (token._.is_important or token.text.lower() in extended_stop_words) and not token.is_stop and token.pos_ != "PUNCT"]
+
+    # Reconstruct the query
+    preprocessed_query = " ".join(tokens)
+
+    return preprocessed_query
+
+
+
+
+
 def preprocess_rewritten_queries(rewritten_queries):
     """
     Preprocesses the rewritten queries to extract useful information.
@@ -115,37 +166,45 @@ if __name__ == "__main__":
     print(f"Total number of queries: {len(original_queries)}")
 
     # Evaluate queries to determine which need rewriting
-
-    query_evaluator = QueryEvaluator("Ashishkr/query_wellformedness_score",
-                                     "Ashishkr/query_wellformedness_score")
+    query_evaluator = QueryEvaluator("Ashishkr/query_wellformedness_score", "Ashishkr/query_wellformedness_score")
     well_formed_scores = query_evaluator.evaluate_queries(original_queries)
     selected_threshold = 0.4
-    queries_to_rewrite = [query for query, score in
-                          zip(original_queries, well_formed_scores) if
-                          score < selected_threshold]
+    queries_to_rewrite = [(query, score) for query, score in zip(original_queries, well_formed_scores) if score < selected_threshold]
+
     print(f"We have {len(queries_to_rewrite)} queries to rewrite.")
 
-    # Check if rewritten queries already exist
+    # Modified section for handling rewritten queries to maintain original query association
     rewritten_queries = load_data_from_file(rewritten_queries_path)
     if rewritten_queries is None:
         rewritten_queries = []
         query_rewriter = RewriteQueries("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")
-        for query in queries_to_rewrite:
-            response = query_rewriter.query(query)
-            if response and isinstance(response, list) and 'generated_text' in \
-                    response[0]:
+        for original_query, _ in queries_to_rewrite:
+            response = query_rewriter.query(original_query)
+            if response and isinstance(response, list) and 'generated_text' in response[0]:
                 generated_text = response[0]['generated_text']
-                rewritten_queries.append({'generated_text': generated_text})
+                rewritten_queries.append({'original_query': original_query, 'generated_text': generated_text})
         save_data_to_file(rewritten_queries, rewritten_queries_path)
 
-    # Process the rewritten queries
-    cleaned_queries = preprocess_rewritten_queries(rewritten_queries)
-    for query in cleaned_queries:
-        print(f"Cleaned Query: {query}")
+    # Process the rewritten queries with the original query included
+    cleaned_queries = [(query['original_query'], preprocess_rewritten_queries([query])[0]) for query in rewritten_queries]
 
-    # output the cleaned queries to a json file
-    with open('cleaned_queries.json', 'w') as f:
+    # Output the cleaned and original queries to a JSON file
+    with open('cleaned_queries_with_original.json', 'w') as f:
         json.dump(cleaned_queries, f)
+
+    # Adjust the final output loop to print both the original and final queries
+    for original_query, cleaned_query in cleaned_queries:
+        preprocessed_query = preprocess_query(cleaned_query)
+        final_query = remove_redundancy(preprocessed_query)
+        print(f"Original Query: {original_query} | Final Query: {final_query}")
+
+
+    # output the final queries to a JSON file
+    with open('final_queries.json', 'w') as f:
+        json.dump(cleaned_queries, f)
+
+
+
 
 
 
