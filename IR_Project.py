@@ -164,6 +164,10 @@ if __name__ == "__main__":
         original_queries = dataset_loader.get_original_queries()
         save_data_to_file(original_queries, original_queries_path)
 
+    # put original queries into a DataFrame
+    original_queries_df = pd.DataFrame(original_queries)
+    print(original_queries_df)
+
 
 
     print(f"Total number of queries: {len(original_queries)}")
@@ -257,26 +261,26 @@ if __name__ == "__main__":
                     pt.measures.MAP(rel=1)]
 
 
-
-    # Evaluating Original Queries
-    print("Evaluating Original Queries with BM25:")
-    results_original = pt.Experiment(
-        [bm25],
-        original_queries_df,
-        qrels,
-        eval_metrics,
-        names=["BM25 Original"]
-    )
-
-    # Evaluating Rewritten Queries
-    print("\nEvaluating Rewritten Queries with BM25:")
-    results_rewritten = pt.Experiment(
-        [bm25],
-        rewritten_queries_df,
-        qrels,
-        eval_metrics,
-        names=["BM25 Rewritten"]
-    )
+    #
+    # # Evaluating Original Queries
+    # print("Evaluating Original Queries with BM25:")
+    # results_original = pt.Experiment(
+    #     [bm25],
+    #     original_queries_df,
+    #     qrels,
+    #     eval_metrics,
+    #     names=["BM25 Original"]
+    # )
+    #
+    # # Evaluating Rewritten Queries
+    # print("\nEvaluating Rewritten Queries with BM25:")
+    # results_rewritten = pt.Experiment(
+    #     [bm25],
+    #     rewritten_queries_df,
+    #     qrels,
+    #     eval_metrics,
+    #     names=["BM25 Rewritten"]
+    # )
 
 
 
