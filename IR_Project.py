@@ -88,6 +88,25 @@ def preprocess_query(query):
     return preprocessed_query
 
 
+def clean_text(text):
+    """Performs common cleaning operations on text."""
+    text = re.sub(r"[\'\(\)]", '', text)  # Remove specific characters
+    text = re.sub(r'\n+', ' ', text)  # Newlines to space
+    return re.sub(r'\s+', ' ', text).strip()  # Multiple spaces to single space
+
+def preprocess_query_final(query, max_tokens=10):
+    """Preprocesses a single query by tokenizing, normalizing, removing stop words, and limiting to a maximum number of tokens."""
+    if not query:
+        raise ValueError("Input query must be a non-empty string")
+    query = clean_text(query)
+    tokens = word_tokenize(query)
+    tokens = [re.sub(r'\W+', '', token.lower()) for token in tokens if re.sub(r'\W+', '', token.lower())]
+    tokens = [token for token in tokens if token not in stopwords.words('english')]
+    tokens = tokens[:max_tokens]
+    return " ".join(tokens)
+
+
+
 
 
 
@@ -236,6 +255,9 @@ if __name__ == "__main__":
     # Rename 'q_id' column to 'qid' to align with PyTerrier's expectations
     df_queries_aligned.rename(columns={'q_id': 'qid'}, inplace=True)
 
+    # run preprocess final queries on df_queries_aligned: query column
+    df_queries_aligned['query'] = df_queries_aligned['query'].apply(preprocess_query_final)
+
     print(df_queries_aligned.head())
 
 
@@ -265,29 +287,28 @@ if __name__ == "__main__":
                     pt.measures.MAP(rel=1)]
 
 
-    # # Evaluating Original Queries
-    # print("Evaluating Original Queries with BM25 and TF-IDF:")
-    # results_original = pt.Experiment(
-    #     [bm25, tf_idf],  # List of retrieval systems to evaluate
-    #     original_queries_df[['qid', 'query']],  # DataFrame with queries
-    #     qrels,  # Qrels for relevance judgments
-    #     eval_metrics,  # Evaluation metrics
-    #     names=["BM25 Original", "TF-IDF Original"]  # Names for the systems
-    # )
-    #
-    # results_original.to_csv('results_original.csv', index=False)
+    # Evaluating Original Queries
+    print("Evaluating Original Queries with BM25 and TF-IDF:")
+    results_original = pt.Experiment(
+        [bm25, tf_idf],  # List of retrieval systems to evaluate
+        original_queries_df[['qid', 'query']],  # DataFrame with queries
+        qrels,  # Qrels for relevance judgments
+        eval_metrics,  # Evaluation metrics
+        names=["BM25 Original", "TF-IDF Original"]  # Names for the systems
+    )
 
+    results_original.to_csv('results_original.csv', index=False)
 
-
-    # Simplifying the experiment call
+    print("Evaluating Rewritten Queries with BM25 and TF-IDF:")
     simple_results = pt.Experiment(
         [bm25, tf_idf],
         df_queries_aligned[['qid', 'query']],
         qrels,
         eval_metrics,
-        names=["BM25 Simple Test", "TF-IDF Simple Test"]
+        names=["BM25 Rewritten", "TF-IDF Rewritten"]
     )
-    print(simple_results)
+
+    simple_results.to_csv('simple_results.csv', index=False)
 
 
 
