@@ -63,6 +63,10 @@ def preprocess_query(query):
     Preprocess a single query using spaCy for tokenization, lemmatization, and stop word removal,
     aiming for greater conciseness.
     """
+    # Clean up the query by removing unwanted characters
+    query = re.sub(r'\n+', ' ', query)  # Replace one or more newlines with a single space
+    query = re.sub(r'\s+', ' ', query).strip()  # Replace multiple spaces with a single space and trim
+
     # Process the text
     doc = nlp(query)
 
@@ -100,9 +104,12 @@ def preprocess_rewritten_queries(rewritten_queries):
         # Extract the generated text
         generated_text = query.get('generated_text', '')
 
+        # Clean up the generated text by removing unwanted characters
+        generated_text = re.sub(r'\n+', ' ', generated_text)  # Replace one or more newlines with a single space
+        generated_text = re.sub(r'\s+', ' ', generated_text).strip()  # Replace multiple spaces with a single space and trim
+
         # Remove instructional text and formatting tags
-        useful_text = re.sub(r"<s> \[INST\].*?\[/INST\]</s>", "",
-                             generated_text, flags=re.DOTALL)
+        useful_text = re.sub(r"<s> \[INST\].*?\[/INST\]</s>", "", generated_text, flags=re.DOTALL)
 
         # Split on line breaks or common dividers and select the first non-empty line
         potential_queries = re.split(r"\n\nOR\n\n|;", useful_text)
@@ -113,6 +120,7 @@ def preprocess_rewritten_queries(rewritten_queries):
             cleaned_queries.append(potential_queries[0])
 
     return cleaned_queries
+
 
 class DatasetLoader:
     def __init__(self, dataset_id):
@@ -128,8 +136,11 @@ class DatasetLoader:
     def get_first_doc(self):
         return next(self.corpus_iterator)
 
+    # Assuming each topic includes a 'query_id' and 'query' field
     def get_original_queries(self):
-        return [topic['query'] for topic_id, topic in self.topics.iterrows()]
+        return [(topic['qid'], topic['query']) for topic_id, topic in
+                self.topics.iterrows()]
+
 
 class QueryEvaluator:
     def __init__(self, tokenizer_model, model_name):
@@ -158,19 +169,8 @@ class RewriteQueries:
 # Example usage
 if __name__ == "__main__":
     dataset_loader = DatasetLoader('irds:msmarco-passage/trec-dl-2020')
-    # Load or fetch original queries
-    original_queries = load_data_from_file(original_queries_path)
-    if original_queries is None:
-        original_queries = dataset_loader.get_original_queries()
-        save_data_to_file(original_queries, original_queries_path)
-
-    # put original queries into a DataFrame
-    original_queries_df = pd.DataFrame(original_queries)
-    print(original_queries_df)
-
-
-
-    print(f"Total number of queries: {len(original_queries)}")
+    original_queries = dataset_loader.get_original_queries()
+    original_queries_df = pd.DataFrame(original_queries, columns=['qid', 'query'])
 
     # Evaluate queries to determine which need rewriting
     query_evaluator = QueryEvaluator("Ashishkr/query_wellformedness_score", "Ashishkr/query_wellformedness_score")
@@ -217,25 +217,28 @@ if __name__ == "__main__":
     with open('cleaned_queries_with_original.json', 'r') as f:
         cleaned_queries = json.load(f)
 
-    # Create a new DataFrame for rewritten queries, ensuring all queries are included
-    rewritten_queries_list = []
-    for q in original_queries:
-        # Find the rewritten version if it exists, otherwise use the original
-        rewritten_or_original = next((item for item in cleaned_queries if
-                                      item['original_query'] == q['query']),
-                                     None)
-        if rewritten_or_original:
-            rewritten_query = rewritten_or_original['final_query']
-        else:
-            rewritten_query = q[
-                'query']  # Use original if not found in rewritten
-        rewritten_queries_list.append(
-            {'qid': q['qid'], 'query': rewritten_query})
+    # Convert the loaded data into a DataFrame
+    # This assumes cleaned_queries now includes q_id in each tuple
+    df_queries = pd.DataFrame(cleaned_queries,
+                              columns=['original', 'rewritten'])
 
-    rewritten_queries_df = pd.DataFrame(rewritten_queries_list)
+    # Perform a left merge to include all original queries
+    df_queries_aligned = pd.merge(original_queries_df, df_queries,
+                                  left_on='query', right_on='original',
+                                  how='left')
+
+    # Fill NaN values in 'rewritten' with the 'query' values
+    df_queries_aligned['rewritten'].fillna(df_queries_aligned['query'],
+                                           inplace=True)
+    df_queries_aligned.drop('original', axis=1, inplace=True)
+    df_queries_aligned.rename(columns={'query': 'original'}, inplace=True)
+    df_queries_aligned.rename(columns={'rewritten': 'query'}, inplace=True)
+    # Rename 'q_id' column to 'qid' to align with PyTerrier's expectations
+    df_queries_aligned.rename(columns={'q_id': 'qid'}, inplace=True)
+
+    print(df_queries_aligned.head())
 
 
-    print(rewritten_queries_df.head())
 
     index_location = str(Path("index").absolute())
     index_exists = os.path.isfile(
@@ -243,7 +246,7 @@ if __name__ == "__main__":
 
     # Fetch corpus iterator just before indexing
     if not index_exists:
-        corpus_iter = dataset_loader.get_corpus_iter()  # Ensure this line is correctly placed
+        corpus_iter = dataset_loader.corpus_iter  # Adjusted from get_corpus_iter() to corpus_iter
         indexer = pt.IterDictIndexer(index_location)
         index_ref = indexer.index(corpus_iter)
         print("Indexing completed.")
@@ -256,31 +259,35 @@ if __name__ == "__main__":
 
     index = pt.IndexFactory.of(index_ref)
     bm25 = pt.BatchRetrieve(index, wmodel="BM25")
+    tf_idf = pt.BatchRetrieve(index, wmodel="TF_IDF")
 
     eval_metrics = [pt.measures.RR(rel=1), pt.measures.nDCG @ 10,
                     pt.measures.MAP(rel=1)]
 
 
-    #
     # # Evaluating Original Queries
-    # print("Evaluating Original Queries with BM25:")
+    # print("Evaluating Original Queries with BM25 and TF-IDF:")
     # results_original = pt.Experiment(
-    #     [bm25],
-    #     original_queries_df,
-    #     qrels,
-    #     eval_metrics,
-    #     names=["BM25 Original"]
+    #     [bm25, tf_idf],  # List of retrieval systems to evaluate
+    #     original_queries_df[['qid', 'query']],  # DataFrame with queries
+    #     qrels,  # Qrels for relevance judgments
+    #     eval_metrics,  # Evaluation metrics
+    #     names=["BM25 Original", "TF-IDF Original"]  # Names for the systems
     # )
     #
-    # # Evaluating Rewritten Queries
-    # print("\nEvaluating Rewritten Queries with BM25:")
-    # results_rewritten = pt.Experiment(
-    #     [bm25],
-    #     rewritten_queries_df,
-    #     qrels,
-    #     eval_metrics,
-    #     names=["BM25 Rewritten"]
-    # )
+    # results_original.to_csv('results_original.csv', index=False)
+
+
+
+    # Simplifying the experiment call
+    simple_results = pt.Experiment(
+        [bm25, tf_idf],
+        df_queries_aligned[['qid', 'query']],
+        qrels,
+        eval_metrics,
+        names=["BM25 Simple Test", "TF-IDF Simple Test"]
+    )
+    print(simple_results)
 
 
 
