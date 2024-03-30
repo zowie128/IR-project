@@ -106,10 +106,6 @@ def preprocess_query_final(query, max_tokens=10):
     return " ".join(tokens)
 
 
-
-
-
-
 def preprocess_rewritten_queries(rewritten_queries):
     """
     Preprocesses the rewritten queries to extract useful information.
@@ -297,6 +293,7 @@ if __name__ == "__main__":
         names=["BM25 Original", "TF-IDF Original"]  # Names for the systems
     )
 
+    print(f"Results for Original Queries:\n{results_original}")
     results_original.to_csv('results_original.csv', index=False)
 
     print("Evaluating Rewritten Queries with BM25 and TF-IDF:")
@@ -308,6 +305,7 @@ if __name__ == "__main__":
         names=["BM25 Rewritten", "TF-IDF Rewritten"]
     )
 
+    print(f"Results for Rewritten Queries:\n{simple_results}")
     simple_results.to_csv('simple_results.csv', index=False)
 
 
