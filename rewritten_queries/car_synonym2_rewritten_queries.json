@@ -1,0 +1,674 @@
+[
+    {
+        "original_query": [
+            "1037496",
+            "who is rep scalise"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: who is rep scalise [/INST]</s>based on the document's context, a possible expansion for the query \"who is rep scalise\" could be \"who is Representative Steve Scalise, the House Majority Whip from Louisiana?\" This expansion provides additional context about the person's role and location."
+    },
+    {
+        "original_query": [
+            "1051399",
+            "who sings monk theme song"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: who sings monk theme song [/INST]</s>ield{expanded_query}\nArtist singing the theme song for the Monk television series\n\nIn this case, the expansion includes mentioning the context of the theme song being for the Monk television series and specifying that we're looking for the artist who sings the theme. This information was derived from the initial query, assuming no specific document context. If more context is available, further refinements to the expanded query might be needed."
+    },
+    {
+        "original_query": [
+            "1103791",
+            "definition of endorsing"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: definition of endorsing [/INST]</s>\n\"definition of endorsing in the context of a person expressing public support or approval for a product, ideology, or other individuals.\""
+    },
+    {
+        "original_query": [
+            "1105792",
+            "define geon"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: define geon [/INST]</s>based on the document's context, the expanded query could be: \"define geon in the context of geographical or location-based identifiers used in databases and software systems.\""
+    },
+    {
+        "original_query": [
+            "1105860",
+            "where can the amazon rainforest is located"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: where can the amazon rainforest is located [/INST]</s>Located in South America, the expanded query would be: \"what is the specific geographical location of the Amazon rainforest within the continent?\""
+    },
+    {
+        "original_query": [
+            "1106979",
+            "define pareto chart in statistics"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: define pareto chart in statistics [/INST]</s>\n\"Create a comprehensive query regarding the definition of a Pareto chart in the context of statistical analysis, including its purpose as a graphical tool to illustrate the significance of the 'vital few' and 'trivial many' in data distribution.\""
+    },
+    {
+        "original_query": [
+            "1108450",
+            "define define gallows"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: define define gallows [/INST]</s>based on the document's context, a potential expanded query could be: \"what is the definition and historical background of gallows as a method of capital punishment?\""
+    },
+    {
+        "original_query": [
+            "1108651",
+            "what the best way to get clothes white"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what the best way to get clothes white [/INST]</s>\n\"What is the most effective method for whitening clothes, including techniques for stain removal and brightening yellowed fabrics, in the context of laundry and home care.\""
+    },
+    {
+        "original_query": [
+            "1108729",
+            "what temperature and humidity to dry sausage"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what temperature and humidity to dry sausage [/INST]</s>\"What is the ideal temperature and humidity level for safely drying sausage during the curing process, taking into account proper moisture and air circulation?\""
+    },
+    {
+        "original_query": [
+            "1109699",
+            "what mental illnesses"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what mental illnesses [/INST]</s>based on the document's context, possible expanded query could be: \"what mental illnesses are discussed in this text and how are they characterized?\""
+    },
+    {
+        "original_query": [
+            "1110678",
+            "what is the un fao"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is the un fao [/INST]</s>Based on the provided query, a possible contextual expansion could be: \"What is the United Nations Food and Agriculture Organization (FAO) and its role in promoting sustainable agriculture and food security?\""
+    },
+    {
+        "original_query": [
+            "1113042",
+            "what is shakespeare s theatre called"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is shakespeare s theatre called [/INST]</s>based on the document's context, a possible expanded query could be: \"What is the name of the theater where William Shakespeare's plays were first performed?\""
+    },
+    {
+        "original_query": [
+            "1113256",
+            "what is reba mcentire s net worth"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is reba mcentire s net worth [/INST]</s>artists total wealth: Reba McEntire's net worth\n\nPlease note that the expanded query is generated based on the assumption that the document provides information about the net worth of various artists, including Reba McEntire. The phrase \"artists total wealth\" is included to help the ranking model understand the context of the query and to provide relevant results."
+    },
+    {
+        "original_query": [
+            "1114993",
+            "conformative definition"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: conformative definition [/INST]</s>Based on the query, a possible expansion could be: \"provide a definition that describes the similarities and differences between two related concepts or ideas, also known as a contrastive definition.\""
+    },
+    {
+        "original_query": [
+            "1118370",
+            "what does provisions mean"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what does provisions mean [/INST]</s>based on the document's context, a possible expansion for \"what does provisions mean\" could be: \"what is the definition and meaning of the term 'provisions' in the given text?\""
+    },
+    {
+        "original_query": [
+            "1120588",
+            "caries detection system"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: caries detection system [/INST]</s>\"dental caries detection system using AI and machine learning techniques\"\n\nThe expanded query incorporates additional terms related to the document's context, namely the use of artificial intelligence and machine learning techniques in dental caries detection systems. This expansion provides more specific and relevant results for the user's query."
+    },
+    {
+        "original_query": [
+            "1121879",
+            "what are the major political parties in great britain select all that apply"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what are the major political parties in great britain select all that apply [/INST]</s>al \"major political parties in Great Britain\" including \"Conservative Party\", \"Labour Party\", \"Liberal Democrats\", and \"Scottish National Party\" as applicable."
+    },
+    {
+        "original_query": [
+            "1122138",
+            "what are symptoms of kid"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what are symptoms of kid [/INST]</s>Based on the given query, a contextual expansion could be: \"What are the symptoms of kidney disease or kidney failure?\" This expansion takes into account potential conditions related to the symptoms of \"kid\" (short for kidney)."
+    },
+    {
+        "original_query": [
+            "1123657",
+            "walmart phone number linton in"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: walmart phone number linton in [/INST]</s>Based on the given query, a possible contextual expansion could be: \"Contact information: What is the phone number for Walmart store located in Linton, Indiana?\" This expansion includes the specific location of the Walmart store to help narrow down the search results."
+    },
+    {
+        "original_query": [
+            "1125632",
+            "routing number for savings bank of maine"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: routing number for savings bank of maine [/INST]</s>\n\"Savings Bank of Maine routing number in context: Obtaining the specific ABA routing transit number for Savings Bank of Maine transactions and transfers.\""
+    },
+    {
+        "original_query": [
+            "1125755",
+            "reigning definition"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: reigning definition [/INST]</s>Based on the given query, a possible contextual expansion could be: \"Define the term 'reigning' in the context of a current ruler or champion holding a position of power or authority.\""
+    },
+    {
+        "original_query": [
+            "1126523",
+            "outmaneuver definition"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: outmaneuver definition [/INST]</s>\"Define outmaneuver: describe the action of skillfully outsmarting or outflanking an opponent, typically in a competitive or strategic situation, taking into account the context of tactics, strategies, and competitive advantages.\""
+    },
+    {
+        "original_query": [
+            "1126738",
+            "number of employees for disa global solutions"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: number of employees for disa global solutions [/INST]</s>ese queries provide context: \n\n1. \"Could you tell me the current number of employees at DIAs (Defense Intelligence Agency) Global Solutions?\"\n\nExpanded query: current number of staff members or personnel at Defense Intelligence Agency Global Solutions\n\n2. \"How many employees are currently working for DISA Global Solutions?\"\n\nExpanded query: total count of employees currently engaged by DIAs Global Solutions\n\n3. \"What is the employee headcount for DISA Global"
+    },
+    {
+        "original_query": [
+            "1127004",
+            "ms symptoms ms"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: ms symptoms ms [/INST]</s>based on the given query, a possible contextual expansion could be: \"symptoms associated with multiple sclerosis (MS) and its early signs\""
+    },
+    {
+        "original_query": [
+            "1127233",
+            "monk meaning"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: monk meaning [/INST]</s>\n\"Buddhist monk lifestyle\" or \"meaning of monkhood in different religions\" as the given query could refer to the meaning of the term 'monk' in various religious contexts, specifically focusing on their unique lifestyles and the significance of monkhood."
+    },
+    {
+        "original_query": [
+            "1127540",
+            "meaning of shebang"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: meaning of shebang [/INST]</s>ef{rfc2396} \"shebang\" combined with \"meaning\" in this context could refer to the definition and function of the shebang notation in script files, which is used to indicate the interpreter that should be used to execute the script."
+    },
+    {
+        "original_query": [
+            "1130705",
+            "how much do a passport"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how much do a passport [/INST]</s>based on the document's context, the expanded query could be: \"what is the current cost for obtaining a US passport, including any application fees and delivery fees?\""
+    },
+    {
+        "original_query": [
+            "1130847",
+            "how many years you have to go through and school is to become a anesthesiologist"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how many years you have to go through and school is to become a anesthesiologist [/INST]</s>\"To expand the query, it would be: 'what is the duration of education and training required to become a certified anesthesiologist, including both medical school and residency?'\""
+    },
+    {
+        "original_query": [
+            "1131069",
+            "how many sons robert kraft has"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how many sons robert kraft has [/INST]</s>\n\"Number of children or sons that Robert Kraft, the owner of the New England Patriots, has.\""
+    },
+    {
+        "original_query": [
+            "1132044",
+            "how many bricks per wall"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how many bricks per wall [/INST]</s>Based on the context, a possible expansion of the query could be: \"what is the average number of bricks needed to build a single wall?\" The expansion takes into account the idea that the user might be looking for an average rather than an exact number, as well as the possibility that the user is interested in the building process."
+    },
+    {
+        "original_query": [
+            "1132532",
+            "average annual income data analyst"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: average annual income data analyst [/INST]</s>based on context: \"in the field of technology and data science\", average annual income for a data analyst in the technology and data science field."
+    },
+    {
+        "original_query": [
+            "1133485",
+            "how does vitamin c helps"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how does vitamin c helps [/INST]</s>based on the document's context, the expanded query could be: \"what are the ways in which vitamin C contributes to human health and immune system function?\" This expansion aims to capture the potential benefits of vitamin C for overall health."
+    },
+    {
+        "original_query": [
+            "1134094",
+            "hotshot members"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: hotshot members [/INST]</s>based on the context, a possible expansion for the query \"hotshot members\" could be \"high-performing or prominent individuals in a group or organization.\" This expansion takes into account the possible meaning of \"hotshot\" as someone who is very skilled or successful in their field."
+    },
+    {
+        "original_query": [
+            "1134207",
+            "holidays definition"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: holidays definition [/INST]</s>hid=20230425:System.Data.DataRow[3].Value= \"Understand the concept and significance of various holidays, including their cultural, historical, and religious importance.\""
+    },
+    {
+        "original_query": [
+            "1134431",
+            "head basketball coach at texas a m"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: head basketball coach at texas a m [/INST]</s>\"Basketball coach leading the University of Texas at Austin's athletic team\""
+    },
+    {
+        "original_query": [
+            "1134680",
+            "geneva il median sales price"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: geneva il median sales price [/INST]</s>Assuming the document's context is about real estate in Geneva, Illinois:\n\n\"median home sale price in Geneva, Illinois\""
+    },
+    {
+        "original_query": [
+            "1134939",
+            "flyover definition"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: flyover definition [/INST]</s>Document's context: A flyover is a type of bridge that allows vehicles to pass over other roads or railway tracks at a different level.\n\nExpanded query: \"define flyover bridge structure that goes over other roads or railway tracks\""
+    },
+    {
+        "original_query": [
+            "1134988",
+            "first eagle credit union routing number"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: first eagle credit union routing number [/INST]</s>based on the document's context, the expanded query could be: \"First Eagle Federal Credit Union ABA routing transit number to make transactions or set up direct deposit.\""
+    },
+    {
+        "original_query": [
+            "1135268",
+            "antibiotics for what kind of infection"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: antibiotics for what kind of infection [/INST]</s>Based on the document's context, the expanded query could be: \"antibiotics appropriate for treating which types of bacterial infections.\" This refines the query to specify that we're interested in bacterial infections, since antibiotics are not effective against viral infections."
+    },
+    {
+        "original_query": [
+            "1135283",
+            "embedded payments definition"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: embedded payments definition [/INST]</s>\n\"Concept explanation: definition of embedded payments within the context of seamlessly integrating payment processing within software or platforms, enabling transactions without redirecting users to external payment sites.\""
+    },
+    {
+        "original_query": [
+            "1135413",
+            "dx code for thoracic outlet syndrome"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: dx code for thoracic outlet syndrome [/INST]</s>Based on the provided query, a contextual expansion could be: \"Medical diagnosis code for nerve compression in the thoracic outlet region, including neurovascular symptoms in the arm and hand.\""
+    },
+    {
+        "original_query": [
+            "1136047",
+            "difference between a company s strategy and business model is"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: difference between a company s strategy and business model is [/INST]</s>\"Difference between a company's strategy and business model, including aspects such as long-term goals, resource allocation, and value proposition.\""
+    },
+    {
+        "original_query": [
+            "118440",
+            "define bmt medical"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: define bmt medical [/INST]</s>Based on the context, query expansion for \"define bmt medical\" could be: \"explain bone marrow transplant procedure and its medical significance\"."
+    },
+    {
+        "original_query": [
+            "119821",
+            "define curvilinear"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: define curvilinear [/INST]</s>based on the context of wanting to define the term, a possible expanded query could be: \"Provide a detailed explanation and definition of the mathematical term 'curvilinear' in geometry, including its properties and uses.\""
+    },
+    {
+        "original_query": [
+            "121171",
+            "define etruscans"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: define etruscans [/INST]</s>Based on the given query, a contextual expansion could be: \"Provide a comprehensive definition and historical background of the Etruscan civilization, including their language, art, and influence on ancient Rome.\""
+    },
+    {
+        "original_query": [
+            "125659",
+            "define premature babies"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: define premature babies [/INST]</s>\n\"Define premature babies, including factors leading to premature birth and their developmental challenges\""
+    },
+    {
+        "original_query": [
+            "135802",
+            "definition of laudable"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: definition of laudable [/INST]</s>\n\"Definition of praiseworthy qualities or actions, similar to commendable or admirable, in the given text.\""
+    },
+    {
+        "original_query": [
+            "144862",
+            "did prohibition increased crime"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: did prohibition increased crime [/INST]</s>\n\"impact of prohibition on crime rates\", \"effect of alcohol ban on criminal activity\", \"relation between prohibition and increase in illegal activities\""
+    },
+    {
+        "original_query": [
+            "174463",
+            "dog day afternoon meaning"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: dog day afternoon meaning [/INST]</s>\n\"Meaning of 'dog day afternoon' in film context\"\n\nThe query \"dog day afternoon meaning\" can be expanded to \"meaning of 'dog day afternoon' in film context\" as the phrase is most famously associated with the 1975 American crime drama film \"Dog Day Afternoon,\" directed by Sidney Lumet. The expansion would help in finding more accurate and relevant results specifically about the movie, instead of getting information about the literal meaning of"
+    },
+    {
+        "original_query": [
+            "175920",
+            "driving distance geneva ny to syracuse"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: driving distance geneva ny to syracuse [/INST]</s>\"driving distance from Geneva, NY to Syracuse considering road conditions and time of day\""
+    },
+    {
+        "original_query": [
+            "177604",
+            "eating foods that are considered warm"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: eating foods that are considered warm [/INST]</s>based on traditional Chinese medicine: eating foods that are considered warm in nature, such as ginger, garlic, and lamb, according to TCM theory."
+    },
+    {
+        "original_query": [
+            "181626",
+            "estar meaning"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: estar meaning [/INST]</s>audience-specific expansion: \"What is the definition and usage of 'estar' in Spanish, and how does it differ from 'ser' in context?\"\n\nchild-directed expansion: \"Can you explain what the word 'estar' means in Spanish and give examples of how to use it in a sentence, like how we use 'is' and 'am' in English?\"\n\ntechie expansion: \"Differentiate 'estar' and 'ser'"
+    },
+    {
+        "original_query": [
+            "197312",
+            "group edit policy"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: group edit policy [/INST]</s>based on document context: \"policy regarding collaborative editing within a group or team\""
+    },
+    {
+        "original_query": [
+            "206106",
+            "hotels in st louis area"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: hotels in st louis area [/INST]</s>notebook{} \"Hotels in the St. Louis metropolitan area with good amenities and reasonable prices\""
+    },
+    {
+        "original_query": [
+            "253749",
+            "how long does it take for discover to raise limit"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how long does it take for discover to raise limit [/INST]</s>based on the document's context, a possible expanded query could be: \"what is the process and time duration for Discover credit card to increase a user's credit limit?\""
+    },
+    {
+        "original_query": [
+            "26703",
+            "army dating websites"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: army dating websites [/INST]</s>\n\"Online dating platforms specifically designed for military personnel, including soldiers, officers, and veterans, to connect with each other or civilians who respect and appreciate their service.\""
+    },
+    {
+        "original_query": [
+            "302846",
+            "how much caffeine in twinings green tea"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how much caffeine in twinings green tea [/INST]</s>\"Quantity of caffeine in Twinings brand of green tea, considering the different varieties and brewing methods.\""
+    },
+    {
+        "original_query": [
+            "318362",
+            "how much does talent directors get paid a year"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how much does talent directors get paid a year [/INST]</s>\"Salary of talent directors in a year, including compensation for casting directors and film/theater directors, taking into account factors such as experience, location, and industry.\""
+    },
+    {
+        "original_query": [
+            "330501",
+            "how much weight on usps letter"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: how much weight on usps letter [/INST]</s>Based on the query, a possible contextual expansion could be: \"What is the maximum weight limit for letters sent via the USPS (United States Postal Service)?\""
+    },
+    {
+        "original_query": [
+            "390360",
+            "ia suffix meaning"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: ia suffix meaning [/INST]</s>Based on the given query, a possible contextual expansion could be: \"What is the definition or meaning of the suffix 'ia' in the English language?\""
+    },
+    {
+        "original_query": [
+            "42255",
+            "average salary for dental hygienist in nebraska"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: average salary for dental hygienist in nebraska [/INST]</s>{document.0}\n\"The average salary for a dental hygienist in Nebraska is influenced by various factors such as location, years of experience, and the specific industry of employment. For instance, dental hygienists in urban areas typically earn higher salaries than those in rural areas. Similarly, hygienists with more experience or those employed in specialty dental practices tend to have higher wages.\"\n\nExpanded query: \"What is the average salary for an"
+    },
+    {
+        "original_query": [
+            "425632",
+            "is the a splitboard in skis"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: is the a splitboard in skis [/INST]</s>Based on the query, a possible expansion could be: \"Does the sports equipment include a splitboard that can be used as skis?\" The expansion is aimed at clarifying that we are looking for a device that can function both as a splitboard for snowboarding and as skis."
+    },
+    {
+        "original_query": [
+            "42752",
+            "average salary in canada 1985"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: average salary in canada 1985 [/INST]</s>\n\"Median or mean annual wage in Canada during 1985, including adjustments for inflation.\""
+    },
+    {
+        "original_query": [
+            "436707",
+            "largest known insects"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: largest known insects [/INST]</s>\n\"What are the biggest identified insects, taking into account their maximum measured size in the documented world?\"\n\nI have expanded the original query by specifying the requirement of considering the maximum measured size of the insects in the documented world. This addition aims to ensure the search results will rank the largest insect species accurately."
+    },
+    {
+        "original_query": [
+            "444389",
+            "magnesium definition chemistry"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: magnesium definition chemistry [/INST]</s>\n\"Chemical definition of magnesium, including its role, properties, and reactivity in various chemical reactions and compounds.\""
+    },
+    {
+        "original_query": [
+            "449367",
+            "meaning of tattoos around eyes"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: meaning of tattoos around eyes [/INST]</s>\n\"Significance of tattoos placed near the eye area in contemporary culture and historical contexts\""
+    },
+    {
+        "original_query": [
+            "452915",
+            "metabolic disease signs and symptoms"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: metabolic disease signs and symptoms [/INST]</s>\n\"Symptoms and indicators of metabolic disorders, such as diabetes, obesity, and high blood pressure, in relation to biochemical and physiological changes in the body.\""
+    },
+    {
+        "original_query": [
+            "463271",
+            "neptune s distance from earth"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: neptune s distance from earth [/INST]</s>\"Distance between Earth and the planet Neptune, taking into account orbital variations and astronomical unit measurements.\""
+    },
+    {
+        "original_query": [
+            "469589",
+            "oracle bind variable example"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: oracle bind variable example [/INST]</s>\"Example of using bind variables in Oracle SQL queries to improve query performance and prevent SQL injection attacks\""
+    },
+    {
+        "original_query": [
+            "47210",
+            "average wedding dress alteration cost"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: average wedding dress alteration cost [/INST]</s>ield{expanded_query}\naverage cost for altering a wedding dress\ntypical expense for wedding dress alterations\nmean price of wedding gown adjustments\ncommon expense for tailoring a wedding dress\ntypical alteration cost for a wedding dress"
+    },
+    {
+        "original_query": [
+            "482726",
+            "projective definition"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: projective definition [/INST]</s>based on the document's context, a possible expansion for \"projective definition\" could be: \"a definition of a projection in geometry, describing the relationship between a point, line, and plane.\""
+    },
+    {
+        "original_query": [
+            "48792",
+            "barclays fca number"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: barclays fca number [/INST]</s>Based on the query, a contextual expansion could be: \"Find the FCA registration number for Barclays Bank, a UK-based financial institution regulated by the Financial Conduct Authority.\""
+    },
+    {
+        "original_query": [
+            "50122",
+            "benefit policy in layoff"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: benefit policy in layoff [/INST]</s>\n\"Human resources benefit policies during employee layoffs\" or \"Employer provided benefits for workers during company downsizing\"\n\nThese expanded queries provide more context to the initial query, emphasizing the role of human resources, the focus on policies, and the specific event of employee layoffs or company downsizing."
+    },
+    {
+        "original_query": [
+            "514096",
+            "the after hours clinic"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: the after hours clinic [/INST]</s>based on the document's context, an expanded query could be: \"urgent care or walk-in clinic open during evening hours\""
+    },
+    {
+        "original_query": [
+            "519025",
+            "the symptoms of shingles"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: the symptoms of shingles [/INST]</s>\n\"Symptoms of shingles, including skin rash, pain, and potential complications like postherpetic neuralgia, as described in the provided medical document.\""
+    },
+    {
+        "original_query": [
+            "53233",
+            "biggest loser challenge"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: biggest loser challenge [/INST]</s>id=\"md1\">\"Weight loss competition inspiration: participation in a comprehensive program similar to the 'Biggest Loser Challenge', including dietary guidance, exercise plans, and support resources.\""
+    },
+    {
+        "original_query": [
+            "537060",
+            "village of burnham"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: village of burnham [/INST]</s>Based on the query, a possible contextual expansion could be: \"historical information about the village of Burnham, its location, and nearby attractions.\" This expansion takes into account the user's potential interest in learning more about the village, its history, and nearby points of interest, which could be found in the document's context."
+    },
+    {
+        "original_query": [
+            "537817",
+            "vitamin e anti scar"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: vitamin e anti scar [/INST]</s>\n\"Vitamin E for scar reduction and preventing the formation of new scars, considering its potential skin benefits and topical application methods.\""
+    },
+    {
+        "original_query": [
+            "543273",
+            "weather in antigua november"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: weather in antigua november [/INST]</s>\n\"weather forecast in Antigua during November\", \"average temperature and precipitation in Antigua in November\", \"November climate conditions in Antigua\"\n\nThe given query is about the weather in Antigua during November. A contextual expansion of this query could include: \"weather forecast in Antigua during November\", \"average temperature and precipitation in Antigua in November\", and \"November climate conditions in Antigua\". These expansions provide more specific details about the"
+    },
+    {
+        "original_query": [
+            "545355",
+            "weather in novi sad"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: weather in novi sad [/INST]</s>\n\"Current weather conditions in Novi Sad, including temperature, precipitation, and wind\"\n\nThe expansion takes into account the user's intent to know the current state of the weather in Novi Sad, so it includes related terms such as \"current weather conditions,\" \"temperature,\" \"precipitation,\" and \"wind\" to give a more comprehensive view of the weather situation in that location."
+    },
+    {
+        "original_query": [
+            "583468",
+            "what carvedilol used for"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what carvedilol used for [/INST]</s>Based on the document's context, the expanded query could be: \"What are the medical conditions or symptoms that carvedilol, a medication used to treat high blood pressure and heart failure, is typically prescribed for?\""
+    },
+    {
+        "original_query": [
+            "610265",
+            "what county is new york new york in"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what county is new york new york in [/INST]</s>\nWhat county is New York City, located in the state of New York, situated in?"
+    },
+    {
+        "original_query": [
+            "673670",
+            "what is a alm"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is a alm [/INST]</s>based on the query, it seems like the user is asking about \"ALM\" which stands for \"Application Lifecycle Management\". So, a possible expanded query could be: \"What is the definition and concept of Application Lifecycle Management (ALM)?\""
+    },
+    {
+        "original_query": [
+            "708979",
+            "what is aids and hiv"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is aids and hiv [/INST]</s>\n\"what are the causes, symptoms, and transmission methods of HIV and AIDS\"\n\nExplanation: The original query asks about the basics of HIV and AIDS. By expanding the query to include \"causes, symptoms, and transmission methods,\" we ensure that the user receives comprehensive information on the topic, making the search results more relevant and useful."
+    },
+    {
+        "original_query": [
+            "730539",
+            "what is chronometer who invented it"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is chronometer who invented it [/INST]</s>\n\"Who invented the chronometer, and what is its significance in the history of timekeeping?\""
+    },
+    {
+        "original_query": [
+            "735482",
+            "what is cow chip t"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is cow chip t [/INST]</s>based on the given query, the expanded query could be: \"what is the meaning or origin of the term 'cow chip' in the context of obscure phrases or ranching culture?\""
+    },
+    {
+        "original_query": [
+            "75198",
+            "can uti cause stroke"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: can uti cause stroke [/INST]</s>\n\"Can urinary tract infections (UTIs) potentially lead to or be a contributing factor in causing a stroke?\""
+    },
+    {
+        "original_query": [
+            "768208",
+            "what is mamey"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is mamey [/INST]</s>based on the document's context, the expanded query could be: \"What is the definition, origin, and nutritional value of mamey, also known as Pouteria sapota, a tropical fruit known for its unique flavor and creamy texture?\""
+    },
+    {
+        "original_query": [
+            "849550",
+            "what is the symptoms of croup"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what is the symptoms of croup [/INST]</s>\n\"What are the symptoms associated with croup in children, including common signs such as stridor, barking cough, and hoarseness?\""
+    },
+    {
+        "original_query": [
+            "85020",
+            "causes for shortness of breath through exertion"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: causes for shortness of breath through exertion [/INST]</s>\n\"factors contributing to dyspnea upon exertion\" or \"reasons for becoming breathless during physical activity\""
+    },
+    {
+        "original_query": [
+            "86606",
+            "causes of gas in large intestine"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: causes of gas in large intestine [/INST]</s>\n\"Factors contributing to gas buildup in the large intestine,\" or \"What leads to excessive gas in the colon or large intestine?\""
+    },
+    {
+        "original_query": [
+            "88495",
+            "causes of stroke"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: causes of stroke [/INST]</s>\n\"Factors contributing to the onset of stroke, including hypertension, diabetes, high cholesterol, smoking, and family history, within the context of medical and health-related content.\""
+    },
+    {
+        "original_query": [
+            "911232",
+            "what type of conflict does della face in o henry the gift of the magi"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: what type of conflict does della face in o henry the gift of the magi [/INST]</s>\n\"What type of marital conflict and sacrifice does Della face in O. Henry's 'The Gift of the Magi'?\""
+    },
+    {
+        "original_query": [
+            "91576",
+            "chicken as food wikipedia"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: chicken as food wikipedia [/INST]</s>\n\"Chicken as a food source in cuisine, farming, nutrition, and cultural significance, including recipes and preparation methods, chicken breeds, and the poultry industry, according to Wikipedia\""
+    },
+    {
+        "original_query": [
+            "99005",
+            "convert sq meter to sq inch"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: convert sq meter to sq inch [/INST]</s>ereding from the document's context, the expanded query could be: \"calculate the equivalent measurement of square meters to square inches.\""
+    },
+    {
+        "original_query": [
+            "132622",
+            "definition of attempted arson"
+        ],
+        "generated_text": "<s> [INST] As a ranking model, your initial task is query expansion. Your objective is to augment the given query based on the document's context. Provide brief contextual expansion within one or two sentences. Only provide the expanded query. The query to expand: definition of attempted arson [/INST]</s>\n\"criminal act involving deliberate attempt to burn a property, including the elements of setting fire and having the intent to damage or destroy\""
+    }
+]
