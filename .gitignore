@@ -33,6 +33,7 @@ model/wetransfer_model-1-doc2query-all-rankers_2024-03-21_1327/best_rank_list/do
 model/wetransfer_model-1-doc2query-all-rankers_2024-03-21_1327/best_rank_list/doc_msmarco/doc_linear_2_davinci_final_1e-4.tsv
 model/wetransfer_model-1-doc2query-all-rankers_2024-03-21_1327/best_rank_list/doc_msmarco/doc_query_2_doc_3e-4.tsv
 model/wetransfer_model-1-doc2query-all-rankers_2024-03-21_1327/doc_query2doc.ckpt
+model/doc_query2doc.ckpt
 index/data.direct.bf
 index/data.document.fsarrayfile
 index/data.inverted.bf
